@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_3 example</title>
+	
+</head>
+<body bgcolor="yellow">
+	<a href="#">link</a>
+	<a href="#">link</a>
+	<a href="#">link</a>
+	<a href="#">link</a>
+	<a href="#">link</a>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// alert('Page contains ' + jQuery('a').length + ' <a> elements!');
+		alert('Page contains ' + jQuery(document.getElementsByTagName('a')).length +
+			' <a> Elements, And has a '
+			+ jQuery(document.body).attr('bgcolor') + ' background');
+	</script>
+
+</body>
+</html>

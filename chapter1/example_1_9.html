@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_9 example</title>
+	<style type="text/css">
+		li a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+		</ul>
+	</div>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		//selects the second element in the set of <li>/s by index.
+		jQuery('a:eq(1)').css('color', 'red');
+		jQuery('a:eq(1)').parent().css('color', 'green');
+		// jQuery('a:eq(1)').prev().css('color', 'red'); // i don't know why. but it didn't work.
+		// I got it why it didn't work becasue. <li><a></a></li> prev or next to this a tag, there is nothing.
+
+		jQuery('a:eq(0)').css('color', 'purple'); // this one is the simple version of the above and it work. 
+		jQuery('li:eq(1)').nextAll().css('color', 'yellow');
+
+		jQuery('li:eq(1)').parent().children(); // select all <li>'s
+		jQuery('li:eq(1)').parent().children(':last').css('color', 'purple'); // select the last <li>
+	</script>
+
+</body>
+</html>

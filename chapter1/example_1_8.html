@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_8 example</title>
+	<style type="text/css">
+		.border {
+			border: 2px solid #993300;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Paragraph</p>
+		<p>Paragraph</p>
+	</div>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		jQuery('div').find('p').addBack().css('border', '1px solid red');
+		// jQuery('div').find('p').addBack().addClass('border');
+	</script>
+
+	<!-- andSelf() is deprecated. we need to use addBack() -->
+
+	<!-- jQuery는 스택구조로 되어 있는데, div 엘리먼트 내에 p 엘리먼트를 찾아서 p 엘리먼트에만 
+	적용이 되어야 하지만 addBack()을 사용하므로써 그 전에 스택구조에 있는 div 도 그 적용대상에 포함시키는 것임. -->
+
+</body>
+</html>

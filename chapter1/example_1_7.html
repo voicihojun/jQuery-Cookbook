@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_7 example</title>
+</head>
+<body>
+	<p>text</p>
+	<p class="middle">Middle <span>text</span></p>
+	<p class="middle">Middle text</p>
+	<p class="last">text</p>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		alert(jQuery('p').filter('.middle').length); // 2
+		alert(jQuery('p').filter('.middle').end().length); // 4
+		alert(jQuery('p').filter('.middle').find('span').end().end().length); // 4
+	</script>
+
+</body>
+</html>

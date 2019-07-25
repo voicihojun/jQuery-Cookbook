@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_5 example</title>
+</head>
+<body>
+	<a href="#" class="external">link</a>
+	<a href="#" class="external">link</a>
+	<a href="#"></a>
+	<a href="#" class="external">link</a>
+	<a href="#" class="external">link</a>
+	<a href="#" class="external">link</a>
+	<a href="#"></a></li>
+	<a href="#">link</a>
+	<a href="#">link</a>
+	<a href="#">link</a>
+	<a href="#">link</a>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// firstly, select the a tags, and in the a tags, filter .external. 
+		alert(jQuery('a').filter('.external').length + " external links");  // 5
+
+		// firstly, select the a tags. check each a tag having external class.
+		alert(
+			jQuery('a')
+				.filter(function(index){return $(this).hasClass('external');})
+				.length + " external links"
+		);  
+	</script>
+
+</body>
+</html>

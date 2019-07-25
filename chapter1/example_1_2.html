@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_2 example</title>
+	<!-- <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			alert(jQuery('p').text());
+		});
+
+		jQuery(function(){
+			alert(jQuery('p').text());
+		});
+
+		after putting the jQuery CDN in the head tag, 
+		If I use the above two manner, sometimes p tag of body is appeared first, sometimes not. 
+
+		jQuery CDN을 head 창에 사용하고,
+		위의 두 방법을 사용시에는 알러트 창이 나오기 전에 화면에 p 태그 글자가 뿌려지거나, 
+		혹은 알러트 창이 나온 후에 p 태그의 글이 뿌려진다. 즉 랜덤임.
+	</script> -->
+</head>
+<body>
+	<p>The DOM is ready!</p>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		alert(jQuery('p').text());
+	</script>
+<!-- 
+	위와 같이 body 태그 html 내용이 끝난 후 스크립트 창을 이용해 jQuery CDN 을 넣어주고 그 이후 실행될 구문을 입력하면, 
+	모든 로딩이 끝난 후 제이쿼리가 실행이 되기 때문에 더 빠르다. 위에 헤드에 입력할 경우 자바스크립트 엔진이 자바스크립트를 컴파일 할때까지 다른 프로세싱을 멈춘다. 병목현상이 일어나는 것임 -->
+</body>
+</html>

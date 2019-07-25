@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_14 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<a>jquery.com</a>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// jQuery('a').attr('href', 'http://www.jquery.com').attr('href');
+
+		// to add more than one attributes
+		jQuery('a').attr({'href':'http://www.jquery.com', 'title':'jquery.com'}).attr('href');
+
+		// to remove attribute
+		jQuery('a').removeAttr('title');
+
+		// addClass(), removeClass(), toggleClass()
+		// hasClass() : Checks the value of the class attribute for a specific class
+		
+	</script>
+
+</body>
+</html>

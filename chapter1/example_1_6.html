@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_6 example</title>
+</head>
+<body>
+	<p>Ut ad videntur facilisis <em>elit</em> cum. Nibh insitam erat facit
+		<em>saepius</em> magna. Nam ex liber iriure et imperdiet.
+	</p>
+	<p>Claram claritatem</p>
+	<p>In quis <em>laoreet</em> te legunt euismod. Claritatem <em>consuetudium</em> wisi sit velit facilisi.
+	</p>
+
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// total italic words found inside of <p> elements
+		// .find() 와 .filter() 다른 점
+		// 아래를 예로 들자면, find 는 p의 자식노드를 선택/검색할 수 있지만 filter는 p 자체만 변경가능. 
+		// 예를 들자면, 필터로는 그 전에 걸러진 노드인 p 태그 자체의 성질만 변화시킬 수 있다(클래스 등.)
+		alert(jQuery('p').find('em').length);
+
+	</script>
+
+</body>
+</html>

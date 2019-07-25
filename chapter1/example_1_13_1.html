@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_13_1 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<ul id="a">
+		<li>list</li>
+		<li>list</li>
+		<li>list</li>
+		<li>LIST</li>
+	</ul>
+	<ul id="b">
+		
+	</ul>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		jQuery('ul#a li')
+			.click(function(){alert('List Item Clicked')})
+			.parent()
+				.clone(true)
+					.find('li')
+					.appendTo('#b')
+				.end()
+			.end()
+			.remove();
+	</script>
+
+</body>
+</html>

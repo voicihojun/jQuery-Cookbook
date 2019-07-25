@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>first example</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>old content!!! </div>
+	<div>old content!!! </div>
+	<div>old content!!! </div>
+	<div>old content!!! </div>
+
+	<script>
+		jQuery("div").hide()
+					 .text('new content!!!')
+					 .addClass("updatedContent")
+					 .show();
+	</script>
+
+</body>
+</html>

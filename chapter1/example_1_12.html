@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1_12 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li class='remove'>name</li>
+		<li>name</li>
+		<li class='remove'>name</li>
+		<li class='remove'>name</li>
+		<li>name</li>
+		<li class='remove'>name</li>
+		<li>name</li>
+		<li class='remove'>name</li>
+	</ul>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		jQuery('li.remove').replaceWith('<li>removed</li>');
+		// 위랑 같은 내용의 코드를 replaceAll 을 사용하여 나타낼 수 있음
+		// jQuery('<li>removed</li>').replaceAll('li.remove');
+	</script>
+
+</body>
+</html>
