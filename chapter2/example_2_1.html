@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_1 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li><a href="#anchor1">Anchor 1</a></li>
+		<li><a href="#anchor2">Anchor 2</a></li>
+		<li><span><a href="#anchor3">Anchor 3</a></span></li>
+	</ul>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// direct descendant combinator (>)
+		jQuery('#nav li > a');
+		// li 의 자식노드 중 a 를 선택함. child 와 descendant 의 차이
+
+		//jQuery('> p', '#content');
+		// Fundamentally the same as jQuery('#content > p')
+
+		// jQuery('#content').children(); === jQuery('#content > *');
+		// only difference is the fast(children() one is faster than the another)
+
+
+	</script>
+
+</body>
+</html>

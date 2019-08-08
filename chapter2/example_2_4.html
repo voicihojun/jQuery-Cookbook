@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_4 example</title>
+	 <style>
+		div {
+			background: yellow;
+		    border: 1px solid #AAA;
+		    width: 80px;
+		    height: 80px;
+		    margin: 0 5px;
+		    float: left;
+		}
+		div.colored {
+			background: green;
+		}
+  </style>
+</head>
+<body>
+	
+	<button id="run">Run</button>
+
+	<div></div>
+	<div id="mover"></div>
+	<div></div>
+	
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script>
+		$( "#run" ).click(function() {
+			$( "div:animated" ).toggleClass( "colored" );
+		});
+		 
+		function animateIt() {
+			$( "#mover" ).slideToggle( "slow", animateIt );
+		}
+		 
+		animateIt();
+
+		// jQuery('div:animated')
+		// jQuery('div:not(div:animated)').animate({height:100});
+
+		// check whether an element is animating, is() method is useful. 
+		// var myElem = jQuery('#elem');
+		// if(myElem.is(':animated')) {
+		//  	do something
+		// }
+		
+	</script>
+
+</body>
+</html>

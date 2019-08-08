@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_2 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="content">
+		<h1>Main title</h1>
+		<h2>Section tile</h2>
+		<p>Some content...</p>
+		<h2>Section title</h2>
+		<h3>H3</h3>
+		<p>More content...</p>
+	</div>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// h1 에 바로 이어지는  h2 를 선택함.
+		jQuery('h1 + h2').css('color', 'yellow');
+
+		// choose all the sibling
+		// jQuery('h3').siblings().css('color', 'red'); 
+		jQuery('p + h2').css('color', 'red'); // choose all the sibling
+
+	</script>
+
+</body>
+</html>

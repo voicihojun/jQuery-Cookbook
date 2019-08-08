@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_5 example</title>
+	 <style>
+		
+  </style>
+</head>
+<body>
+	<span>Hello Bob!</span>	
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script>
+		jQuery('span:contains("Bob")').css('color', 'green');
+		// if you have some nested elements, you can use :has()
+		// jQuery('div:has(p a)');
+		// if you need more control, you need to use a regular expression
+	</script>
+
+</body>
+</html>

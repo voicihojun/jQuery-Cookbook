@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_6 example</title>
+	 <style>
+		
+  </style>
+</head>
+<body>
+	<span id="content">Hello Bob1</span>	
+	<span>Hello Bob2</span>	
+	<span>Hello Bob3</span>	
+	<span>Hello Bob4</span>	
+	<span>Hello Bob5</span>	
+
+	<a href="#">anchor1</a>
+	<a href="#">anchor2</a>
+	<a href="#">anchor3</a>
+	<a href="#">anchor4</a>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script>
+		jQuery("span:not(#content)").css("background-color", "yellow");
+
+		var $anchors = jQuery('a');
+		$anchors.click(function() {
+			$anchors.not(this).addClass('not-clicked');
+		})
+		
+	</script>
+
+</body>
+</html>

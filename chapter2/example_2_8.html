@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_8 example</title>
+	 <style>
+		
+  </style>
+</head>
+<body>
+	<div id="content-sec-1">...</div>
+	<div id="content-sec-2">...</div>
+	<div id="content-sec-3">...</div>
+	<div id="content-sec-4">...</div>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script>
+		jQuery("div[id^='content-sec-']").css('color', 'red');
+
+		// attr = val
+		// attr != val
+		// attr ^= val start with a certain value
+		// attr $= val end with a certain value
+		// attr ~= val contain the specified value 
+	</script>
+
+</body>
+</html>

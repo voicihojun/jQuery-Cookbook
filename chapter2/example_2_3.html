@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_3 example</title>
+	<style type="text/css">
+		table tr.even {
+			background: #CCC;
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li>First item</li>
+		<li>Second item</li>
+		<li>Third item</li>
+		<li>Fourth item</li>
+	</ol>
+
+	<table>
+		<tr><td>0</td><td>even</td></tr>
+		<tr><td>1</td><td>odd</td></tr>
+		<tr><td>2</td><td>even</td></tr>
+		<tr><td>3</td><td>odd</td></tr>
+		<tr><td>4</td><td>even</td></tr>
+		<tr><td>5</td><td>odd</td></tr>
+	</table>
+
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// choosing first item in a number of different ways
+		jQuery('ol li:first');
+		jQuery('ol li:eq(0)');
+		jQuery('ol li:lt(1)').css('color', 'green');
+
+		// element's index is zero-based.
+		jQuery('tr:even').addClass('even');
+
+		// :first, :last, :even, :odd, :eq(n), :lt(n), :gt(n)
+		jQuery('ol li').filter(':last').css('color', 'red');
+
+	</script>
+
+</body>
+</html>
