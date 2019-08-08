@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_2_1 example</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<ul>
+		<li>First item</li>
+		<li class="selected">Second item</li>
+		<li>Third item</li>
+		<li>Fourth item</li>
+		<li>Fifth item</li>
+	</ul>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// jQuery('li.selected').nextAll('li').css('color', 'red');
+		jQuery('li.selected ~ li').css('color', 'red'); // 위와 같은 결과 나옴.
+
+	</script>
+
+</body>
+</html>
