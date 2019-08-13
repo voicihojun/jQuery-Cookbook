@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_3_2 Convert a selected jQuery object into a raw DOM object</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				var lis = $('ol li').get().reverse();
+				$('ol').empty();
+				$.each(lis, function(i){
+					$('ol').append('<li>'+lis[i].innerHTML + '</li>');
+				});	
+			});	
+		})(jQuery);
+		
+		
+	</script>
+</head>
+<body>
+	<h2>New York Yankees - Batting Line-up</h2>
+	<ol>
+		<li>Jeter</li>
+		<li>Damon</li>
+		<li>Teixeira</li>
+		<li>Posada</li>
+		<li>Swisher</li>
+		<li>Cano</li>
+		<li>Cabrera</li>
+		<li>Molina</li>
+		<li>Ransom</li>
+	</ol>
+</body>
+</html>

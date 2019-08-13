@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_1 Looping through a set of selected results</title>
+	<style type="text/css">
+		.even {
+			background-color: #FFF;
+		}
+
+		.odd {
+			background-color: #CCC;
+		}
+	</style>
+</head>
+<body>
+	<h2>Family Members</h2>
+	<ul>
+		<li>Ralph</li>
+		<li>Hope</li>
+		<li>Brandon</li>
+		<li>Jordan</li>
+		<li>Ralphie</li>
+	</ul>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function() {
+				$('ul > li').each(function(i){
+					if(i % 2 === 1) {
+						$(this).addClass("odd");
+					} else {
+						$(this).addClass('even');
+					}
+				});
+			});
+		})(jQuery);
+
+		// after putting even class to the all <li> tag, 
+		// and then we can use the below
+		// $("ul > li:odd").addClass('odd');
+	</script>
+</body>
+</html>
