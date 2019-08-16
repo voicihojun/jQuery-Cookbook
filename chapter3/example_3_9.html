@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_9 Determining the exact query that was used</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<!-- <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  -->
+	<!-- 버전을 1.3.2 로 하면 책에서 나오는 결과값처럼 $("div", [object HTMLDocument]) 나오지만, 
+	버전을 3.4.1로 하면 $("undefined", undefined) 나옴 -->
+
+	<script type="text/javascript">
+		(function($){
+			$.fn.ShowQuery = function(i){
+				console.log("$(\"" + $(this).selector + "\", " + $(this).context + ")");
+				console.log($(this).context);
+				if(i < 3) {
+					$($(this).selector, $(this).context).ShowQuery(i+1);
+				}
+			};
+			$('div').ShowQuery(2);
+		})(jQuery);
+		
+	</script>
+</head>
+<body>
+	<div>This is a div.</div>
+	
+</body>
+</html>

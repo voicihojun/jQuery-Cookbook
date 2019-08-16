@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_8 Adding functionality with plugins</title>
+	<style type="text/css">
+		.pics {
+			height: 232px;
+			width: 232px;
+			padding: 0;
+			margin: 0;
+		}
+
+		.pics img {
+			padding: 15px;
+			border: 1px solid #ccc;
+			background-color: #eee;
+			width: 400px;
+			height: 400px;
+			top: 0;
+			left:0;
+		}
+	</style>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.cycle/2.99/jquery.cycle.all.min.js"></script>
+	
+	<script type="text/javascript">
+		jQuery.browser = {};
+		(function () {
+		    jQuery.browser.msie = false;
+		    jQuery.browser.version = 0;
+		    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+		        jQuery.browser.msie = true;
+		        jQuery.browser.version = RegExp.$1;
+		    }
+		})();
+
+		(function($){
+			$(document).ready(function(){
+				$('.pics').cycle('fade');
+			});
+		})(jQuery);
+	</script>
+</head>
+<body>
+	<div class="pics">
+		<img src="images/beach1.jpeg" width="300" height="300" alt="beach1" />
+		<img src="images/beach2.jpeg" width="300" height="300" alt="beach2" />
+		<img src="images/beach3.jpeg" width="300" height="300" alt="beach3" />
+	</div>
+</body>
+</html>

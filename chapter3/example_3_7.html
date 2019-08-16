@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_7 Configuring jQuery not to conflict with other libraries</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/Javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.min.js"></script> 
+	
+	<script type="text/javascript">
+		// $ 사인이 프로토타입제이에스와 제이쿼리 양쪽에 사용되어서 그 충돌을 막기위한 코드.
+		// jQuery에서 $ 사인 대신 jQuery를 사용하면 된다. 
+
+		// 혹은 아래와 같이 사용할 수 있음.
+		// var j = jQuery.noConflict();
+		// j(document).ready.....
+		jQuery.noConflict();
+
+		// use jQuery via jQuery(...)
+		jQuery(document).ready(function(){
+			jQuery('div#jQuery').css("font-weight", "bold");
+		});
+
+		// use Prototype with $(...), etc
+		document.observe("dom:loaded", function(){
+			$('prototype').setStyle({
+				fontSize: '10px'
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="jQuery">hello, i am a jQuery div</div>
+	<div id="prototype">hello, i am a Prototype div</div>
+</body>
+</html>
