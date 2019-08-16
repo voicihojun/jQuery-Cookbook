@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_6 Performing an Action on a subset of the selected set</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function(){
+				$('p').slice(1,3).wrap('<i></i>');
+			});
+		})(jQuery);
+		
+	</script>
+</head>
+<body>
+	<p>aaaaaa</p>
+	<p>bbbbbbb</p>
+	<p>cccccc</p>
+	<p>ddddddd</p>
+</body>
+</html>

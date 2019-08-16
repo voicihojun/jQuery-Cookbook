@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_5 Making a unique array of values from an existing array</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function(){
+				var arr = $.map($("LI"), function(item, index){
+					while(index < 4){
+						return $(item).html();
+					}
+					return null;
+				});
+				$(document.body).append("<span>The first three authors are: " + arr.join(', ') + "</span>");
+			});	
+		})(jQuery);
+
+		// $.map() takes two arguments, an array and a callback function.
+		// $.map([1,2,3], function(n,i) {return n+i;});
+		// output : [1,3,5]
+		
+	</script>
+</head>
+<body>
+	<h1>jQuery Cookbook Authors</h1>
+	<ol>
+		<li>John</li>
+		<li>Cody</li>
+		<li>James</li>
+		<li>Ralph</li>
+		<li>Jonathan</li>
+		<li>Michael</li>
+		<li>Scott</li>
+		<li>Remy</li>
+		<li>Branden</li>
+	</ol>
+</body>
+</html>

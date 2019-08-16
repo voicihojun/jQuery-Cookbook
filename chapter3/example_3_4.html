@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter3_4 Getting the index of an Item in a selection</title>
+	<script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function(){
+				$('div').click(function(){
+					alert("You clicked on div with an index of " + $('div').index(this));
+				});
+			});	
+		})(jQuery);
+		
+	</script>
+</head>
+<body>
+	<div>click me</div>
+	<div class="test">test</div>
+	<div>click me</div>
+</body>
+</html>
